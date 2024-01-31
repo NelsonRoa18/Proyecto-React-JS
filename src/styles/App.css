@@ -1,2 +1,11 @@
 /*Clases especificas de mi aplicacion*/
 
+.navBarColor{
+    background-color: #ba806d; 
+}
+
+.imgBanner{
+    width: 50%;
+    border-radius: 220px 220px 220px 220px;
+    padding: 50px;   
+}

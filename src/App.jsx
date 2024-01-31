@@ -10,6 +10,7 @@
 import './styles/App.css';
 import Test from "./components/Test";
 import Navbar from './components/Navbar';
+import ItemCount from './components/ItemCount';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
     <>
 
       <Navbar />
+      <ItemCount />
     </>
 
 
