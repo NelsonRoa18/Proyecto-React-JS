@@ -8,17 +8,40 @@
 
 //import React from 'react'; //Esta linea no es necesaria react ya entiende que es una fnucion de el
 import './styles/App.css';
-import Test from "./components/Test";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import ItemCount from './components/ItemCount';
+import ItemListContainer from './components/ItemListContainer';
+import Cart from './components/Cart';
+import Checkout from './components/Checkout';
+import ItemListDetailsContainer from './components/ItemDetailsContainer';
+import NotFound from './components/NotFound';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
     //esta apertura y cierre es para agregar mas de 1 componente
     <>
+      <BrowserRouter>
 
-      <Navbar />
-      <ItemCount />
+        <Navbar />
+        <h1 className='text-center'>Bienvenidos a su tienda favorita</h1>
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/category/:cid' element={<ItemListContainer />} />
+          <Route path='/productos/:pid' element={<ItemListDetailsContainer />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path='*' element={<NotFound />} />
+
+
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+
+
+
+
+
     </>
 
 

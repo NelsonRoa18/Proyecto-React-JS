@@ -2,66 +2,72 @@ import ItemListContainer from './ItemListContainer';
 import CartWidget from './CartWidget'
 import Categories from './Categories';
 import ItemCount from './ItemCount';
-
-
+import { Link } from 'react-router-dom';
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const Navbar = () => {
 
     return (
         <>
-            <nav className="navBarColor">
-                <div className="mx-auto max-w-7xl px-2">
+            <Disclosure as="nav" className="navBarColor">
+                {({ open }) => (
+                    <>
+                        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                            <div className="relative flex h-16 items-center justify-between">
+                                <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                                    {/* Mobile menu button*/}
+                                    <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                        <span className="absolute -inset-0.5" />
+                                        <span className="sr-only bg-white">Open main menu</span>
+                                        {open ? (
+                                            <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                                        ) : (
+                                            <Bars3Icon className="block h-6 w-6" stroke-with="1.5" stroke="white" aria-hidden="true" />
+                                        )}
+                                    </Disclosure.Button>
+                                </div>
+                                <div className="flex flex-1 items-center justify-center sm:items-stretch">
+                                    <div className="flex flex-shrink-0">
+                                        <img
 
-                    <div className="relative flex h-16 items-center justify-between">
-                        <div className="flex flex-1 items-center">
+                                            className="h-14 imgBanner w-auto "
+                                            src="/img/logo.jpg"
+                                            alt="H"
+                                        />
+                                    </div>
+                                    <div className="hidden md:flex md:items-center sm:block">
+                                        {/* Aca va el itemListContainer*/}
+                                        <Categories />
 
-                            <img
-                                className="imgBanner"
-                                src="../public/haritz.jpeg"
-                                alt="H"
-                            />
 
+                                    </div>
+                                    <div className="hidden md:flex md:items-center sm:block">
+
+                                        {/* Aca va el CartWidet*/}
+                                        <CartWidget />
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
+                        <Disclosure.Panel className="sm:hidden">
+                            <div className="space-y-1 px-2 pb-3 pt-2">
+                                {/* Aca va el itemListContainer*/}
+                                <Categories />
+                            </div>
+                            <div className="space-y-1 px-2 pb-3 pt-2">
 
-                        <div className="flex flex-1 items-center">
-                            {/* Aca va el itemListContainer*/}
-                            <Categories />
+                                {/* Aca va el CartWidet*/}
+                                <CartWidget />
 
-
-                        </div>
-                        <div className="flex flex-1 items-center">
-                            <label class="relative block">
-
-                                <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-                                    <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
-                                </span>
-                                <input class="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Buscar..." type="text" name="search" />
-                            </label>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-8 w-8 fill-slate-100">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                            </svg>
-
-
-                        </div>
-                        <div className="flex flex-1 items-center">
-
-                            {/* Aca va el CartWidet*/}
-                            <CartWidget />
-
-                        </div>
-
-                    </div>
-                    <div className="flex flex-1 items-center">
-
-                        {/* Aca va el CartWidet*/}
-                        <ItemListContainer />
-
-                    </div>
-
-                </div>
-            </nav >
+                            </div>
+                        </Disclosure.Panel>
+                    </>
+                )}
+            </Disclosure>
         </>
     )
 }

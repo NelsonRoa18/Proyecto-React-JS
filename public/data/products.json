@@ -1,0 +1,273 @@
+[
+    {
+        "id": 1,
+        "title": "Aceite helix HX6 10w-40",
+        "brand": "Shell",
+        "price": 22500,
+        "stock": 54,
+        "img": "1.jpg",
+        "category":"aceites"
+    },
+    {
+        "id": 2,
+        "title": "Aceite helix HX8 5w-40",
+        "brand": "Shell",
+        "price": 85000,
+        "stock": 10,
+        "img": "2.jpg",
+        "category":"aceites"
+    },
+    {
+        "id": 3,
+        "title": "Aceite helix HX3 15w-60",
+        "brand": "Shell",
+        "price": 36874,
+        "stock": 5,
+        "img": "3.jpg",
+        "category":"aceites"
+    },
+    {
+        "id": 4,
+        "title": "Aceite helix HX7 10w-40",
+        "brand": "Shell",
+        "price": 28750,
+        "stock": 12,
+        "img": "4.jpg",
+        "category":"aceites"
+    },
+    {
+        "id": 5,
+        "title": "Aceite extravida XV300 15w-40",
+        "brand": "YPF",
+        "price": 65412,
+        "stock": 40,
+        "img": "5.jpg",
+        "category":"aceites"
+    },
+    {
+        "id": 6,
+        "title": "Aceite elaion auro 5w-30",
+        "brand": "YPF",
+        "price": 32548,
+        "stock": 10,
+        "img": "6.jpg",
+        "category":"aceites"
+    },
+    {
+        "id": 7,
+        "title": "Aceite elaion F50 E 5w-30",
+        "brand": "YPF",
+        "price": 74859,
+        "stock": 12,
+        "img": "7.jpg",
+        "category":"aceites"
+    },
+    {
+        "id": 8,
+        "title": "Aceite elaion F40 12w-40",
+        "brand": "YPF",
+        "price": 21356,
+        "stock": 25,
+        "img": "8.jpg",
+        "category":"aceites"
+    },
+    {
+        "id": 9,
+        "title": "Aceite elaion F50 J 2w-20",
+        "brand": "YPF",
+        "price": 36875,
+        "stock": 10,
+        "img": "9.jpg",
+        "category":"aceites"
+    },
+    {
+        "id": 10,
+        "title": "Aceite elaion F50 J 2w-20",
+        "brand": "YPF",
+        "price": 36875,
+        "stock": 10,
+        "img": "9.jpg",
+        "category":"aceites"
+    },
+    {
+        "id": 11,
+        "title": "Filtro de aire conico acero",
+        "brand": "Grande auto",
+        "price": 6875,
+        "stock": 10,
+        "img": "11.jpg",
+        "category":"filtros de aire"
+    },
+    {
+        "id": 12,
+        "title": "Filtro de aire C",
+        "brand": "Mann Filter",
+        "price": 3975,
+        "stock": 10,
+        "img": "12.jpg",
+        "category":"filtros de aire"
+    },
+    {
+        "id": 13,
+        "title": "Filtro de aire rectangular",
+        "brand": "Mann Filter",
+        "price": 8175,
+        "stock": 10,
+        "img": "13.jpg",
+        "category":"filtros de aire"
+    },
+    {
+        "id": 14,
+        "title": "Filtro de aire rectangular fino",
+        "brand": "Bosch",
+        "price": 7785,
+        "stock": 10,
+        "img": "14.jpg",
+        "category":"filtros de aire"
+    },
+    {
+        "id": 15,
+        "title": "Filtro de aire conico acero deportivo",
+        "brand": "Bosch",
+        "price": 15548,
+        "stock": 10,
+        "img": "15.jpg",
+        "category":"filtros de aire"
+    },
+    {
+        "id": 16,
+        "title": "Liquido refrigerante TIR Rosa",
+        "brand": "TIR",
+        "price": 1525,
+        "stock": 10,
+        "img": "16.jpg",
+        "category":"liquidos refrigerantes"
+    },
+    {
+        "id": 17,
+        "title": "Liquido refrigerante TOTAL",
+        "brand": "TOTAL",
+        "price": 3875,
+        "stock": 10,
+        "img": "17.jpg",
+        "category":"liquidos refrigerantes"
+    },
+    {
+        "id": 18,
+        "title": "Liquido refrigerante repsol",
+        "brand": "Repsol",
+        "price": 6175,
+        "stock": 10,
+        "img": "18.jpg",
+        "category":"liquidos refrigerantes"
+    },
+    {
+        "id": 19,
+        "title": "Liquido refrigerante gulf",
+        "brand": "Gulf",
+        "price": 2875,
+        "stock": 10,
+        "img": "19.jpg",
+        "category":"liquidos refrigerantes"
+    },
+    {
+        "id": 20,
+        "title": "Liquido refrigerante renium",
+        "brand": "Renium",
+        "price": 93687,
+        "stock": 10,
+        "img": "20.jpg",
+        "category":"liquidos refrigerantes"
+    },
+    {
+        "id": 21,
+        "title": "Filtro de aceite Naf",
+        "brand": "FRAM",
+        "price": 7875,
+        "stock": 10,
+        "img": "21.jpg",
+        "category":"filtros de aceite"
+    },
+    {
+        "id": 22,
+        "title": "Filtro de aceite Naf",
+        "brand": "Bosch",
+        "price": 8775,
+        "stock": 10,
+        "img": "22.jpg",
+        "category":"filtros de aceite"
+    },
+    {
+        "id": 23,
+        "title": "Filtro de aceite Gasolero",
+        "brand": "K&N",
+        "price": 9975,
+        "stock": 10,
+        "img": "23.jpg",
+        "category":"filtros de aceite"
+    },
+    {
+        "id": 24,
+        "title": "Filtro de aceite Gasolero",
+        "brand": "Toyota",
+        "price": 3575,
+        "stock": 10,
+        "img": "24.jpg",
+        "category":"filtros de aceite"
+    },
+    {
+        "id": 25,
+        "title": "Filtro de aceite Gasolero",
+        "brand": "Gulf",
+        "price": 36875,
+        "stock": 10,
+        "img": "25.jpg",
+        "category":"filtros de aceite"
+    },
+    {
+        "id": 26,
+        "title": "Tuercas anitrobo 19",
+        "brand": "IAM",
+        "price": 36875,
+        "stock": 10,
+        "img": "26.jpg",
+        "category":"accesorios"
+    },
+    {
+        "id": 27,
+        "title": "Escobillas limpiaparabrisas",
+        "brand": "Bosch",
+        "price": 36875,
+        "stock": 10,
+        "img": "27.jpg",
+        "category":"accesorios"
+    },
+    {
+        "id": 28,
+        "title": "Escobillas limpiaparabrisas",
+        "brand": "Brasen",
+        "price": 36875,
+        "stock": 10,
+        "img": "28.jpg",
+        "category":"accesorios"
+    },
+    {
+        "id": 29,
+        "title": "Shampoo",
+        "brand": "Silisur",
+        "price": 36875,
+        "stock": 10,
+        "img": "29.jpg",
+        "category":"accesorios"
+    },
+    {
+        "id": 30,
+        "title": "Autopolish",
+        "brand": "Autopolish",
+        "price": 36875,
+        "stock": 10,
+        "img": "30.jpg",
+        "category":"accesorios"
+    }
+
+]
