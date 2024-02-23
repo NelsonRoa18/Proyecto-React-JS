@@ -16,26 +16,29 @@ import Checkout from './components/Checkout';
 import ItemListDetailsContainer from './components/ItemDetailsContainer';
 import NotFound from './components/NotFound';
 import Footer from './components/Footer';
+import { CarritoProvider } from './context/CartContext';
+
 
 const App = () => {
   return (
     //esta apertura y cierre es para agregar mas de 1 componente
     <>
       <BrowserRouter>
+        <CarritoProvider> {/* Se coloca abarcando todo el renderizado porque el carrito alcanza a toda la pagina */}
+          <Navbar />
+          <h1 className='text-center'>Bienvenidos a su tienda favorita</h1>
+          <Routes>
+            <Route path='/' element={<ItemListContainer />} />
+            <Route path='/category/:cid' element={<ItemListContainer />} />
+            <Route path='/productos/:pid' element={<ItemListDetailsContainer />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
+            <Route path='*' element={<NotFound />} />
 
-        <Navbar />
-        <h1 className='text-center'>Bienvenidos a su tienda favorita</h1>
-        <Routes>
-          <Route path='/' element={<ItemListContainer />} />
-          <Route path='/category/:cid' element={<ItemListContainer />} />
-          <Route path='/productos/:pid' element={<ItemListDetailsContainer />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/checkout' element={<Checkout />} />
-          <Route path='*' element={<NotFound />} />
 
-
-        </Routes>
-        <Footer />
+          </Routes>
+          <Footer />
+        </CarritoProvider>
       </BrowserRouter>
 
 

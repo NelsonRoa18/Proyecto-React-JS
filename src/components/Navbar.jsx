@@ -17,11 +17,11 @@ const Navbar = () => {
                             <div className="relative flex h-16 items-center justify-between">
                                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                     {/* Mobile menu button*/}
-                                    <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                    <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                                         <span className="absolute -inset-0.5" />
                                         <span className="sr-only bg-white">Open main menu</span>
                                         {open ? (
-                                            <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                                            <XMarkIcon className="block h-6 w-6" stroke-with="1.5" stroke="white" aria-hidden="true" />
                                         ) : (
                                             <Bars3Icon className="block h-6 w-6" stroke-with="1.5" stroke="white" aria-hidden="true" />
                                         )}
@@ -33,7 +33,7 @@ const Navbar = () => {
 
                                             className="h-14 imgBanner w-auto "
                                             src="/img/logo.jpg"
-                                            alt="H"
+                                            alt="Logo"
                                         />
                                     </div>
                                     <div className="hidden md:flex md:items-center sm:block">

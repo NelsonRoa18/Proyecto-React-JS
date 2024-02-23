@@ -1,13 +1,15 @@
 import React from 'react';
 import ItemDetailsContainer from './ItemDetailsContainer';
 import useCounter from '../hooks/useCounter';
+import { useCarritoContext } from '../context/CartContext';
+
 
 const ItemDetail = ({ item }) => {
-
+    const {addItem} = useCarritoContext()
     const { count, increment, decrement } = useCounter(1, item.stock, 1)
 
     const handleAddToCart = () => {
-        console.log("Producto agregado al carrito");
+        addItem(item, count)
     }
 
     return (
@@ -22,6 +24,7 @@ const ItemDetail = ({ item }) => {
                             <h2 className='text-lg font-semibold mb-2'>Marca: {item.brand}</h2>
                             <p className='text-gray-700 mb-2'>Descripcion: {item.title}</p>
                             <p className='text-gray-700 mb-2'>Stock: {item.stock}</p>
+                            <p className='text-gray-700 mb-2'>Precio: ${item.price}</p>
 
 
                         </div>
