@@ -1,4 +1,37 @@
-[
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, doc, addDoc, getDocs, getDoc, updateDoc, deleteDoc } from 'firebase/firestore'
+const firebaseConfig = {
+
+  apiKey: "AIzaSyAheJNdGN11LKp1PCNLDXhQkWsBDkgL-m4",
+
+  authDomain: "react-2024-nelson-roa.firebaseapp.com",
+
+  projectId: "react-2024-nelson-roa",
+
+  storageBucket: "react-2024-nelson-roa.appspot.com",
+
+  messagingSenderId: "745307529818",
+
+  appId: "1:745307529818:web:a9925200c675c112fc6e63"
+
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+//Consultar a la BDD
+const bdd = getFirestore()
+
+/*
+    Create
+    Read
+    Update
+    Delete
+*/
+
+
+const prods = 
+  [
     {
         
         "title": "Aceite helix HX6 10w-40",
@@ -271,3 +304,59 @@
     }
 
 ]
+export const createProducts = async () => {
+    prods.forEach(async (prod) => {
+      await addDoc(collection(bdd, "productos"),{
+        title: prod.title,
+        brand: prod.brand,
+        price: prod.price,
+        stock: prod.stock,
+        img: prod.img,
+        category: prod.category
+      })
+    });
+
+}
+
+
+// Consultar productos
+export const getProducts = async () => {
+  const productos = await getDocs(collection(bdd, "productos"))
+  const items = productos.docs.map(prod => { return { ...prod.data(), id: prod.id } })
+  return items
+}
+
+//Consultar Producto
+export const getProduct = async (id) => {
+  const producto = await getDoc(doc(bdd, "productos", id))
+  const item = { ...producto.data(), id: producto.id }
+  return item
+}
+
+// Actualizar Producto
+
+export const updateProduct = async (id, info) => {
+  await updateDoc(doc(bdd, "productos", id), info)
+}
+
+// Eliminar producto
+
+export const deleteProduct = async (id) => {
+  await deleteDoc(doc(bdd, "productos", id))
+}
+
+export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {
+    const ordenCompra = await addDoc(collection(bdd, "ordenesCompra"), {
+        cliente: cliente,
+        items: carrito,
+        precioTotal: precioTotal,
+        fecha: fecha
+    })
+    return ordenCompra
+}
+
+export const getOrdenCompra = async (id) => {
+    const ordenCompra = await getDoc(doc(bdd, "ordenesCompra", id))
+    const item = { ...ordenCompra.data(), id: ordenCompra.id }
+    return item
+}

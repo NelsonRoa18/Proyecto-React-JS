@@ -20,7 +20,7 @@ export const CarritoProvider = (props) => { //Forma de proveer el contexto, pued
     }
 
     //Agregar producto recibe, el item y la cantidad
-    const addItem = () => {
+    const addItem = (item, cantidad) => {
         if(isInCart(item.id)){
 
             const indice = carrito.findIndex(prod => prod.id === item.id)
@@ -62,6 +62,14 @@ export const CarritoProvider = (props) => { //Forma de proveer el contexto, pued
         setCarrito([]);
     }
 
+    //Funcion a revisar
+    const updateItem = (id, newQuantity) => {
+        const indice = carrito.findIndex(prod => prod.id === id)
+        const aux = carrito
+        aux[indice].quantity = newQuantity
+        setCarrito([...aux])
+    }
+
     //Obtener cantidad de predocutos
     const getItemQuantity = () => {
 
@@ -76,7 +84,7 @@ export const CarritoProvider = (props) => { //Forma de proveer el contexto, pued
 
 
     return (
-        <CarritoContext.Provider value = {{ carrito, addItem, removeItem, emptyCart, getItemQuantity, totalPrice}} >
+        <CarritoContext.Provider value = {{ carrito, addItem, removeItem, emptyCart, getItemQuantity, totalPrice,  updateItem}} >
             {props.children}
         </CarritoContext.Provider>
     )

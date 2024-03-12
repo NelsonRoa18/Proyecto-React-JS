@@ -12,12 +12,12 @@ const useCounter = (minValue = 0, maxValue = 1, step = 1) => {
 
 
     const decrement = () =>{
-        if (count - step >= minValue)      
+        if (count - step >= 1)      
         setCount(count - step)
     } 
 
     const reset = () => {
-        setCount(minValue) 
+        setCount(1) 
     }
 
     return {count, increment, decrement, reset}

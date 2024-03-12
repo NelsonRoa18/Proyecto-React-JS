@@ -2,14 +2,25 @@ import React from 'react';
 import ItemDetailsContainer from './ItemDetailsContainer';
 import useCounter from '../hooks/useCounter';
 import { useCarritoContext } from '../context/CartContext';
+import { toast } from "react-toastify"
 
 
 const ItemDetail = ({ item }) => {
-    const {addItem} = useCarritoContext()
+    const { addItem } = useCarritoContext()
     const { count, increment, decrement } = useCounter(1, item.stock, 1)
 
     const handleAddToCart = () => {
         addItem(item, count)
+        toast.success(`Producto agregado al carrito correctamente`, {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark"
+        })
     }
 
     return (
@@ -18,7 +29,7 @@ const ItemDetail = ({ item }) => {
                 <div className="bg-gray-200 p-4 rounded-md shadow-md text-center">
                     <div className='grid grid-rows-3 grid-flow-col gap-4'>
                         <div className='row-start-1 row-end-4'>
-                            <img src={`../img/${item.img}`} alt={`Imagen de ${item.brand}`} />
+                            <img src={`${item.img}`} alt={`Imagen de ${item.brand}`} />
                         </div>
                         <div className='row-start-1 row-end-4 text-center'>
                             <h2 className='text-lg font-semibold mb-2'>Marca: {item.brand}</h2>

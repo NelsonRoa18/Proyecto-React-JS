@@ -31,8 +31,8 @@ const Navbar = () => {
                                     <div className="flex flex-shrink-0">
                                         <img
 
-                                            className="h-14 imgBanner w-auto "
-                                            src="/img/logo.jpg"
+                                            className="h-14 imgBanner w-auto mr-2"
+                                            src="https://firebasestorage.googleapis.com/v0/b/react-2024-nelson-roa.appspot.com/o/logo.jpg?alt=media&token=d48b355e-2d34-4506-9cbf-0bf50b2838ca"
                                             alt="Logo"
                                         />
                                     </div>

@@ -8,6 +8,7 @@
 
 //import React from 'react'; //Esta linea no es necesaria react ya entiende que es una fnucion de el
 import './styles/App.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
@@ -17,7 +18,7 @@ import ItemListDetailsContainer from './components/ItemDetailsContainer';
 import NotFound from './components/NotFound';
 import Footer from './components/Footer';
 import { CarritoProvider } from './context/CartContext';
-
+import { ToastContainer} from 'react-toastify';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
       <BrowserRouter>
         <CarritoProvider> {/* Se coloca abarcando todo el renderizado porque el carrito alcanza a toda la pagina */}
           <Navbar />
+          <ToastContainer />
           <h1 className='text-center'>Bienvenidos a su tienda favorita</h1>
           <Routes>
             <Route path='/' element={<ItemListContainer />} />
